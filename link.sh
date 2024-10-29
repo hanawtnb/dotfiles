@@ -19,3 +19,10 @@ if [[ -f "$ALACRITTY_CONFIG" ]]; then
     mkdir -p "$HOME/.config/alacritty"
     ln -fnsv "$ALACRITTY_CONFIG" "$HOME/.config/alacritty/alacritty.toml"
 fi
+
+# tmux/.tmux.conf を ~/.config/tmux/ にリンク
+TMUX_CONFIG="$DOTFILES_DIR/tmux/.tmux.conf"
+if [[ -f "$TMUX_CONFIG" ]]; then
+    mkdir -p "$HOME/.config/tmux"
+    ln -fnsv "$TMUX_CONFIG" "$HOME/.config/tmux/.tmux.conf"
+fi
